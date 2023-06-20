@@ -4,13 +4,17 @@ session_start();
 
 if($_SERVER["REQUEST_METHOD"] == "POST") {
 
-	 $myusername = mysqli_real_escape_string($db,$_POST['email']);
-     $mypassword = mysqli_real_escape_string($db,$_POST['password']); 
-	
-     $sql = "SELECT id FROM login WHERE username = '$myusername' and password = '$mypassword'";
-     // echo $sql;die();
+
+        // echo  urlencode($_POST['password']);die();
+	 $myusername = mysqli_real_escape_string($db,($_REQUEST['email']));
+     $mypassword = mysqli_real_escape_string($db,($_REQUEST['password'])); 
+	// echo $myusername.'==user'.$mypassword;die();
+     // $sql = "SELECT id FROM login WHERE username = '$myusername' and password = '".$mypassword."'";
+     $sql = "SELECT id FROM register WHERE email = '$myusername' and password = '".$mypassword."'";
+      //echo $sql;die();
+     //echo $sql;die();
      $result = mysqli_query($db,$sql);
-     $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+     //$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
      $count = mysqli_num_rows($result);
 
       if($count === 1) {
