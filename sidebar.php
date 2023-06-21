@@ -21,15 +21,16 @@
                                     <li><a href="index3.html">SEO dashboard</a></li> -->
                                 </ul>
                             </li>
-                            <li>
-                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Sidebar
-                                        Types
+                            <li class="active">
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Section
+                                        Details
                                     </span></a>
                                 <ul class="collapse">
-                                    <li><a href="index.html">Left Sidebar</a></li>
-                                    <li><a href="index3-horizontalmenu.html">Horizontal Sidebar</a></li>
+                                    <li ><a href="view_section.php">Add Section</a></li>
+                                    <li ><a href="view_sectionincharge.php">Add Section Incharge</a></li>
                                 </ul>
                             </li>
+
                             <li>
                                 <a href="javascript:void(0)" aria-expanded="true"><i class="ti-pie-chart"></i><span>Charts</span></a>
                                 <ul class="collapse">

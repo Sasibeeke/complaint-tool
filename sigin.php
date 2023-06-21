@@ -10,7 +10,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
      $mypassword = mysqli_real_escape_string($db,($_REQUEST['password'])); 
 	// echo $myusername.'==user'.$mypassword;die();
      // $sql = "SELECT id FROM login WHERE username = '$myusername' and password = '".$mypassword."'";
-     $sql = "SELECT id FROM register WHERE email = '$myusername' and password = '".$mypassword."'";
+     $sql = "SELECT sno FROM register WHERE email = '$myusername' and password = '".$mypassword."'";
       //echo $sql;die();
      //echo $sql;die();
      $result = mysqli_query($db,$sql);
