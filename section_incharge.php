@@ -8,9 +8,7 @@ include 'connection.php';
 
 <body>
 
-    <div id="preloader">
-        <div class="loader"></div>
-    </div>
+   
     <!-- preloader area end -->
     <!-- page container area start -->
     <div class="page-container">

@@ -4,9 +4,9 @@
 
 <body>
 
-    <div id="preloader">
+   <!--  <div id="preloader">
         <div class="loader"></div>
-    </div>
+    </div> -->
     <!-- preloader area end -->
     <!-- page container area start -->
     <div class="page-container">

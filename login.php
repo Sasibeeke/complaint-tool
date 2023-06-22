@@ -9,9 +9,9 @@
 
 <body>
   
-    <div id="preloader">
+  <!--   <div id="preloader">
         <div class="loader"></div>
-    </div>
+    </div> -->
     <!-- preloader area end -->
     <!-- login area start -->
     <div class="login-area login-bg">

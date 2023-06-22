@@ -21,15 +21,7 @@
                                     <li><a href="index3.html">SEO dashboard</a></li> -->
                                 </ul>
                             </li>
-                            <li class="active">
-                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Section
-                                        Details
-                                    </span></a>
-                                <ul class="collapse">
-                                    <li ><a href="view_section.php">Add Section</a></li>
-                                    <li ><a href="view_sectionincharge.php">Add Section Incharge</a></li>
-                                </ul>
-                            </li>
+                            
 
                             <li>
                                 <a href="javascript:void(0)" aria-expanded="true"><i class="ti-pie-chart"></i><span>Charts</span></a>
@@ -120,7 +112,15 @@
                                     <li><a href="#">Item level (1)</a></li>
                                 </ul>
                             </li>
-
+                            <li class="active">
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Section
+                                        Details
+                                    </span></a>
+                                <ul class="collapse">
+                                    <li ><a href="view_section.php">Add Section</a></li>
+                                    <li ><a href="view_sectionincharge.php">Add Section Incharge</a></li>
+                                </ul>
+                            </li>
                             <!-- <li><a href="logout.php"><i class="ti-map-alt"></i> <span>Logout</span></a></li> -->
                             
                             <li><a href="logout.php"><i class="ti-share-alt"></i> <span>Logout</span></a></li>
