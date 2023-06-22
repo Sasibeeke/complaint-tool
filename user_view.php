@@ -17,7 +17,7 @@ header("Location: login.php");
    
     <!-- page container area start -->
     <div class="page-container">
-        <?php include 'sidebar.php';?>
+        <?php include 'sidebar_user.php';?>
         <!-- main content area start -->
         <div class="main-content">
             

@@ -21,11 +21,15 @@
                                     <li><a href="index3.html">SEO dashboard</a></li> -->
                                 </ul>
                             </li>
-                            <li><a href="floor_view.php" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Floor Coordinator
+                            <li><a href="raise_complaint_form.php" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Raise Complaint
                                     </span></a>
                                
                             </li>
-                            <li>
+							<li><a href="complaint_view.php" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>View Complaint
+                                    </span></a>
+                               
+                            </li>
+                        <!--  <li>
                                 <a href="javascript:void(0)" aria-expanded="true"><i class="ti-pie-chart"></i><span>Charts</span></a>
                                 <ul class="collapse">
                                     <li><a href="barchart.html">bar chart</a></li>
@@ -114,7 +118,7 @@
                                     <li><a href="#">Item level (1)</a></li>
                                 </ul>
                             </li>
-
+							-->
                             <!-- <li><a href="logout.php"><i class="ti-map-alt"></i> <span>Logout</span></a></li> -->
                             
                             <li><a href="logout.php"><i class="ti-share-alt"></i> <span>Logout</span></a></li>

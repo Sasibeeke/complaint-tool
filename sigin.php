@@ -10,18 +10,25 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
      $mypassword = mysqli_real_escape_string($db,($_REQUEST['password'])); 
 	// echo $myusername.'==user'.$mypassword;die();
      // $sql = "SELECT id FROM login WHERE username = '$myusername' and password = '".$mypassword."'";
-     $sql = "SELECT id FROM register WHERE email = '$myusername' and password = '".$mypassword."'";
-      //echo $sql;die();
+     $sql = "SELECT * FROM user WHERE email = '$myusername' and password = '".$mypassword."'";
+    // echo $sql;die();
      //echo $sql;die();
      $result = mysqli_query($db,$sql);
      //$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
      $count = mysqli_num_rows($result);
 
       if($count === 1) {
-         // session_register("myusername");
-         $_SESSION['username'] = $myusername;
+        while($row = mysqli_fetch_assoc($result)) {
+			$sno=$row['sno'];$name=$row['name'];$email=$row['email'];$role=$row['role'];									
+		}
+		 $_SESSION['username'] = $name;
+		 
+		 if ($role==1){
+			header("location: index.php");
+		 }else{
+			header("location: user_view.php"); 
+		 }
          
-         header("location: index.php");
       }else {
 
       	 //echo 'hi';die();
