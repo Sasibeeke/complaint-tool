@@ -19,11 +19,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
       if($count === 1) {
         while($row = mysqli_fetch_assoc($result)) {
-			$sno=$row['sno'];$name=$row['name'];$email=$row['email'];$role=$row['role'];									
+			$sno=$row['sno'];$name=$row['name'];$email=$row['email'];$role=$row['role'];$floor_no=$row['floor_no'];$section_code=$row['section_code'];									
 		}
 		 $_SESSION['username'] = $name;
 		 $_SESSION['role'] = $role;
-		 
+		 $_SESSION['floor_no'] = $floor_no;
+		 $_SESSION['section_code'] = $section_code;
+		
 		 if ($role==1){
 			header("location: user_view.php"); 
 		 }elseif ($role==2){

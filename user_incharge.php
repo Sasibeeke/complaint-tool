@@ -17,27 +17,18 @@ header("Location: login.php");
    
     <!-- page container area start -->
     <div class="page-container">
-        <?php 
-		if($_SESSION['role']==1)
-			include 'sidebar_user.php';
-		elseif($_SESSION['role']==2)
-			include 'sidebar_incharge.php';
-		else
-			include 'sidebar.php';
-		?>
-		
+        <?php include 'sidebar_incharge.php';?>
         <!-- main content area start -->
         <div class="main-content">
             
             <?php include 'body.php';?>
-
-            <div class="main-content-inner">
+		<div class="main-content-inner">
                 <!-- sales report area start -->
                 <div class="sales-report-area mt-5 mb-5">
                     <div class="row">
                         <div class="col-md-3">
                             <div class="single-report mb-xs-30">
-                                <div class="s-report-inner  pt--30 mb-3">
+                                <div class="s-report-inner pr--20 pt--30 mb-3">
 								
                                     <div class="icon"><i class="fa fa-building-o"></i></div>
                                     <div class="s-report-title d-flex justify-content-between">
@@ -46,8 +37,9 @@ header("Location: login.php");
                                     </div>
                                     <div class="d-flex justify-content-between pb-2">
 									
-									<?php 
-									  $sql = "select count(*) as total_complaints  from complaint_tbl c";
+									<?php
+									  $section_code=$_SESSION['section_code'];	
+									  $sql = "select count(*) as total_complaints  from complaint_tbl c where c.section_code='$section_code'";
 									  $result = mysqli_query($db, $sql);
 									  $row = mysqli_fetch_assoc($result);
 									  $total_complaints=$row['total_complaints']; 	
@@ -62,7 +54,7 @@ header("Location: login.php");
                         </div>
                         <div class="col-md-3">
                             <div class="single-report mb-xs-30">
-                                <div class="s-report-inner  pt--30 mb-3">
+                                <div class="s-report-inner pr--20 pt--30 mb-3">
                                     <div class="icon"><i class="fa fa-tasks teal-color"></i></div>
                                     <div class="s-report-title d-flex justify-content-between">
                                         <h4 class="header-title mb-0">Pending Complaints</h4>
@@ -70,7 +62,8 @@ header("Location: login.php");
                                     </div>
                                     <div class="d-flex justify-content-between pb-2">
                                         <?php 
-									  $sql = "select count(*) as pending_complaints  from complaint_tbl c where c.flag in ('0','1')";
+									  $section_code=$_SESSION['section_code'];	
+									  $sql = "select count(*) as pending_complaints  from complaint_tbl c where c.flag ='1' and c.section_code='$section_code'";
 									  $result = mysqli_query($db, $sql);
 									  $row = mysqli_fetch_assoc($result);
 									  $pending_complaints=$row['pending_complaints']; 	
@@ -85,15 +78,16 @@ header("Location: login.php");
                         </div>
                         <div class="col-md-3">
                             <div class="single-report">
-                                <div class="s-report-inner  pt--30 mb-3">
+                                <div class="s-report-inner pr--20 pt--30 mb-3">
                                     <div class="icon"><i class="fa fa-lock"></i></div>
                                     <div class="s-report-title d-flex justify-content-between">
                                         <h4 class="header-title mb-0">Solved Complaints</h4>
                                        <!--<p>24 H</p>-->
                                     </div>
                                     <div class="d-flex justify-content-between pb-2">
-									<?php 
-									  $sql = "select count(*) as completed_complaints  from complaint_tbl c where c.flag='2'";
+									<?php
+									  $section_code=$_SESSION['section_code'];										
+									  $sql = "select count(*) as completed_complaints  from complaint_tbl c where c.flag='2' and c.section_code='$section_code'";
 									  $result = mysqli_query($db, $sql);
 									  $row = mysqli_fetch_assoc($result);
 									  $completed_complaints=$row['completed_complaints']; 	
@@ -108,15 +102,16 @@ header("Location: login.php");
                         </div>
 						<div class="col-md-3">
                             <div class="single-report">
-                                <div class="s-report-inner  pt--30 mb-3">
+                                <div class="s-report-inner pr--20 pt--30 mb-3">
                                     <div class="icon"><i class="fa fa-ban"></i></div>
                                     <div class="s-report-title d-flex justify-content-between">
                                         <h4 class="header-title mb-0">Rejected Complaints</h4>
                                        <!--<p>24 H</p>-->
                                     </div>
                                     <div class="d-flex justify-content-between pb-2">
-									<?php 
-									  $sql = "select count(*) as rejected_complaints  from complaint_tbl c where c.flag='3'";
+									<?php
+									   $section_code=$_SESSION['section_code'];	
+									  $sql = "select count(*) as rejected_complaints  from complaint_tbl c where c.flag='3' and c.section_code='$section_code'";
 									  $result = mysqli_query($db, $sql);
 									  $row = mysqli_fetch_assoc($result);
 									  $rejected_complaints=$row['rejected_complaints']; 	
@@ -132,6 +127,7 @@ header("Location: login.php");
                     </div>
                 </div>
                 <!-- sales report area end -->
+                <!-- overview area start -->
                 <!-- overview area start -->
                 <div class="row">
                     <div class="col-xl-9 col-lg-8">
@@ -151,8 +147,10 @@ header("Location: login.php");
                    </div>
 
                 <!-- overview area end -->
-                          
-            </div>
+                <!-- overview area end -->
+               
+             
+            </div>	
         </div>
         <!-- main content area end -->
         <?php include 'footer_bar.php';?>
@@ -160,7 +158,8 @@ header("Location: login.php");
     <!-- page container area end -->
     <?php include 'body_head.php';?>
    <?php include 'footer.php';?>
-   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
    <script type="text/javascript">
     // Load the Visualization API and the corechart package
     google.charts.load('current', {'packages':['corechart']});
