@@ -3,7 +3,7 @@
         <div class="sidebar-menu">
             <div class="sidebar-header">
                 <div class="logo">
-                    <a href="index.php">
+                    <a href="user_view.php">
                         <!-- <img src="assets/images/icon/logo.png" alt="logo"> -->
                         <h4 style="color:white;">Dashboard</h4>
                     </a>
@@ -16,29 +16,23 @@
                             <li>
                                 <a href="javascript:void(0)" aria-expanded="true"><i class="ti-dashboard"></i><span>dashboard</span></a>
                                 <ul class="collapse">
-                                    <li> <a href="index.php">Complaint dashboard</a></li>
+                                    <li><a href="user_view.php">Complaint dashboard</a></li>
                                     <!-- <li><a href="index2.html">Ecommerce dashboard</a></li>
                                     <li><a href="index3.html">SEO dashboard</a></li> -->
                                 </ul>
                             </li>
-                            <li><a href="floor_view.php" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Floor Coordinator
+                            <li><a href="raise_complaint_form.php" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Raise Complaint
                                     </span></a>
                                
                             </li>
-							<li >
-                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Section
-                                        Details
+							<li><a href="complaint_view.php" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>View Complaint
                                     </span></a>
-                                <ul class="collapse">
-                                    <li ><a href="view_section.php">Section</a></li>
-                                    <li ><a href="view_sectionincharge.php">Section Incharge</a></li>
-                                </ul>
+                               
                             </li>
 							 <li><a href="track_complaints_view.php" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Track Complaints
                                     </span></a>
-                               </li> 
-							
-                           <!-- <li>
+                               </li>
+                        <!--  <li>
                                 <a href="javascript:void(0)" aria-expanded="true"><i class="ti-pie-chart"></i><span>Charts</span></a>
                                 <ul class="collapse">
                                     <li><a href="barchart.html">bar chart</a></li>
@@ -127,7 +121,7 @@
                                     <li><a href="#">Item level (1)</a></li>
                                 </ul>
                             </li>
-
+							-->
                             <!-- <li><a href="logout.php"><i class="ti-map-alt"></i> <span>Logout</span></a></li> -->
                             
                             <li><a href="logout.php"><i class="ti-share-alt"></i> <span>Logout</span></a></li>

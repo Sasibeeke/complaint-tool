@@ -14,7 +14,7 @@ if(isset($_POST['submit'])){
       //echo $sql;die();
     if(mysqli_query($db, $sql)) {
          $last_id = mysqli_insert_id($db);
-            $_SESSION['message'] = "<div class='alert alert-info' role='alert'>Section added successfully!</div>";
+            $_SESSION['message'] = "<div class='alert alert-info' role='alert'>Section Name Added Successfully!</div>";
              //redirect is remaining//
              header("location: view_section.php"); 
       }else {

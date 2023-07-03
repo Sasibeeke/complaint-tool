@@ -8,24 +8,26 @@ if(isset($_POST['submit'])){
 
 
         // echo  urlencode($_POST['password']);die();
-	  $name = mysqli_real_escape_string($db,($_REQUEST['name']));
-     $email = mysqli_real_escape_string($db,($_REQUEST['email']));
-     $password = mysqli_real_escape_string($db,($_REQUEST['password'])); 
-     $confirmpassword = mysqli_real_escape_string($db,($_REQUEST['confirmpassword'])); 
-	// echo $name.'==user'.$email.'password=='.$password.'cnf'.$confirmpassword;die();
+	$name = mysqli_real_escape_string($db,($_REQUEST['name']));
+	$email = mysqli_real_escape_string($db,($_REQUEST['email']));
+    $password = mysqli_real_escape_string($db,($_REQUEST['password'])); 
+    $confirmpassword = mysqli_real_escape_string($db,($_REQUEST['confirmpassword']));
+	$role = mysqli_real_escape_string($db,($_REQUEST['role']));
+	$floor_no = mysqli_real_escape_string($db,($_REQUEST['floor_no']));
+	$section_code = mysqli_real_escape_string($db,($_REQUEST['section_code']));	
+	// echo $floor_no.' ==floor_no=== '.$section_code.'  ===section_code== '.$password.'cnf'.$confirmpassword;die();
 
       // Performing insert query execution
         // here our table name is register
-        $sql = "INSERT INTO register (name,email,password) VALUES ('$name',
-            '$email','$password')";
+    $sql = "INSERT INTO user (name,email,password,role,creation_date,floor_no,section_code) VALUES ('$name','$email','$password','$role',now(),'$floor_no','$section_code')";
         
        // $result = mysqli_query($db, $sql);
 
       //echo mysqli_insert_id($db);
       //echo $sql;
      // die();
-     //echo $sql;die();
-    
+    // echo $sql;die();
+   
     
     
     if (mysqli_query($db, $sql)) {
