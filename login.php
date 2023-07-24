@@ -18,7 +18,7 @@
         <div class="container">
             <div class="login-box ptb--100">
 
-                <form action="sigin.php" method="post">
+                <form action="signin.php" method="post">
                     <div class="login-form-head">
                         <h4>Sign In</h4>
                         <p>Hello there, Sign in and start managing  your Complaint monitoring tool</p>
@@ -47,10 +47,7 @@
                         </div>
                         <div class="row mb-4 rmber-area">
                             <div class="col-6">
-                                <div class="custom-control custom-checkbox mr-sm-2">
-                                    <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
-                                    <label class="custom-control-label" for="customControlAutosizing">Remember Me</label>
-                                </div>
+                               
                             </div>
                             <div class="col-6 text-right">
                                 <a href="forgot-password.php">Forgot Password?</a>

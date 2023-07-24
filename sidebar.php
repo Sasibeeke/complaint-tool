@@ -3,9 +3,9 @@
         <div class="sidebar-menu">
             <div class="sidebar-header">
                 <div class="logo">
-                    <a href="index.html">
+                    <a href="index.php">
                         <!-- <img src="assets/images/icon/logo.png" alt="logo"> -->
-                        <h3>Complaint Dashboard</h3>
+                        <h4 style="color:white;">Dashboard</h4>
                     </a>
                 </div>
             </div>
@@ -13,10 +13,10 @@
                 <div class="menu-inner">
                     <nav>
                         <ul class="metismenu" id="menu">
-                            <li class="active">
+                            <li>
                                 <a href="javascript:void(0)" aria-expanded="true"><i class="ti-dashboard"></i><span>dashboard</span></a>
                                 <ul class="collapse">
-                                    <li class="active"><a href="index.php">Complaint dashboard</a></li>
+                                    <li> <a href="index.php">Complaint dashboard</a></li>
                                     <!-- <li><a href="index2.html">Ecommerce dashboard</a></li>
                                     <li><a href="index3.html">SEO dashboard</a></li> -->
                                 </ul>
@@ -25,7 +25,20 @@
                                     </span></a>
                                
                             </li>
-                            <li>
+							<li >
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Section
+                                        Details
+                                    </span></a>
+                                <ul class="collapse">
+                                    <li ><a href="view_section.php">Section</a></li>
+                                    <li ><a href="view_sectionincharge.php">Section Incharge</a></li>
+                                </ul>
+                            </li>
+							 <li><a href="track_complaints_view.php" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Track Complaints
+                                    </span></a>
+                               </li> 
+							
+                           <!-- <li>
                                 <a href="javascript:void(0)" aria-expanded="true"><i class="ti-pie-chart"></i><span>Charts</span></a>
                                 <ul class="collapse">
                                     <li><a href="barchart.html">bar chart</a></li>

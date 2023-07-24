@@ -15,11 +15,12 @@ if(isset($_POST['submit'])){
 	$remarks = mysqli_real_escape_string($db,($_REQUEST['remarks']));
 	$nature_of_complaint="ABC";
 	$flag = 0;	
+	$complaint_description = mysqli_real_escape_string($db,($_REQUEST['complaint_description']));
+	$nature_of_complaint="ABC";
+	$flag = 0;	
 	// here our table name is register
-    $sql = "INSERT INTO complaint_tbl (section_code,complaint_date,floor_no,floor_coordinator_empno,location_in_floor,nature_of_complaint,flag,remarks) VALUES ('$section_code',now(),'$floor_no','$floor_coordinator_empno','$location_in_floor','$nature_of_complaint','$flag','$remarks')";
-          
-    
-    if (mysqli_query($db, $sql)) {
+    $sql = "INSERT INTO complaint_tbl (section_code,complaint_date,floor_no,floor_coordinator_empno,location_in_floor,nature_of_complaint,flag,description) VALUES ('$section_code',now(),'$floor_no','$floor_coordinator_empno','$location_in_floor','$nature_of_complaint','$flag','$complaint_description')";
+   if (mysqli_query($db, $sql)) {
          // session_register("myusername");
              $last_id = mysqli_insert_id($db);
            //  echo "New record created successfully. Last inserted ID is: " . $last_id;
